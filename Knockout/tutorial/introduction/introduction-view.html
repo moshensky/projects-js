@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Knockout Introduction</title>
+    <script src="../../knockout-2.2.1.js"></script>
+</head>
+<body>
+    <!-- This is a *view* - HTML markup that defines the appearance of your UI -->
+
+    <p>First name: <strong data-bind="text: firstName"></strong></p>
+    <p>Last name: <strong data-bind="text: lastName"></strong></p>
+
+    <p>First name:
+        <input data-bind="value: firstName" /></p>
+    <p>Last name:
+        <input data-bind="value: lastName" /></p>
+
+    <p>Full name: <strong data-bind="text: fullName"></strong></p>
+
+    <button data-bind="click: capitalizeLastName">Go caps</button>
+    <script src="introduction-view-model.js"></script>
+</body>
+</html>

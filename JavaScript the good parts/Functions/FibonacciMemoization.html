@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Fib numbers using memoization</title>
+    <script>
+        var fibonacci = function () {
+            var memo = [0, 1];
+            var fib = function (n) {
+                var result = memo[n];
+                if (typeof result !== 'number') {
+                    result = fib(n - 1) + fib(n - 2);
+                    memo[n] = result;
+                }
+                return result;
+            };
+
+            return fib;
+        }();
+    </script>
+</head>
+<body>
+
+</body>
+</html>
